@@ -22,6 +22,7 @@
 - belongs_to :user
 - belongs_to :massage
 
+
 ## groupテーブル
 
 |Column|Type|Options|
