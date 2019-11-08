@@ -20,7 +20,7 @@
 
 ### Association
 - belongs_to :user
-- belongs_to :massage
+- belongs_to :group
 
 
 ## groupテーブル
