@@ -1,0 +1,10 @@
+%html
+  %body
+    %header
+.form
+  .input-box
+    %input#message_content.input-box__text{name: "message[content]", placeholder: "type a message", type: "text"}/
+    %label{class: "input-box__image"}
+      = icon('fas', 'image')
+      %input#file_type.file_text{type: "file"}
+  %input.submit-btn{"data-disable-with" => "Send", name: "commit", type: "submit", value: "Send"}/
