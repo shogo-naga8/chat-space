@@ -5,16 +5,16 @@
     background-color:#253141;
     height: 100px;
     display: flex;
-    // align-items: center;
-    // justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
     padding: 0 20px;
     &__box {
       display: flex;
-      // justify-content: space-between;
+      justify-content: space-between;
       width: 100%;
       font-weight: bold;
       font-size: 16px;
-      margin: 0 auto;
+      // margin: 0 auto;
       align-items: center;
 
       color: #ffff;
