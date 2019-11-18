@@ -1,16 +1,16 @@
 .main
   .main-header
-    .main-header__left__box
-      %p.main-header__left__box__group-name
-        = @group.name
+    %p.main-header__left__box__group-name
+      = @group.name
+    .main-header__left__box__na
       %p.main-header__left__box__group-member
         Member:
-      - @group.users.each do |user|
-        %li.member
-          = user.name
-      .main-header__right__box
-        %p.main-header__right__box__edit-btn
-          = link_to "Edit", edit_group_path(current_user)
+        - @group.users.each do |user|
+          %li.member
+            = user.name
+    .main-header__right__box
+      %p.main-header__right__box__edit-btn
+        = link_to "Edit",edit_group_path(current_user),class:"dddd-btn"
 
   .message
     = render @messages
