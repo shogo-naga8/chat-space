@@ -1,11 +1,50 @@
 .main
   .main-header
     .main-header__left__box
-      %p.main-header__left__box__group-name group-name
-      %p.main-header__left__box__group-member Member
+      %p.main-header__left__box__group-name
+        = @group.name
+      %p.main-header__left__box__group-member
+        Member:
+      - @group.users.each do |user|
+        %li.member
+          = user.name
       .main-header__right__box
         %p.main-header__right__box__edit-btn
           = link_to "Edit", edit_group_path(current_user)
-    
+
+  .message
+    = render @messages
+    .message-header
+      .message-data__name
+        %p.message-data__name__d
+        %p.message-data__name__message
+      .message__text
+
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
 
 
+
+    -# .input-box
+-#     %input#message_content.input-box__text{name: "message[content]", placeholder: "type a message", type: "text"}/
+-#     %label{class: "input-box__image"}
+-#       = icon('fas', 'image')
+-#       %input#file_type.file_text{type: "file"}
+-#   %input.submit-btn{"data-disable-with" => "Send", name: "commit", type: "submit", value: "Send"}/
+
+-# .form
+-#       = form_for [@group, @message] do |f|
+-#         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+-#         .form__mask
+-#           = f.label :image, class: 'form__mask__image' do
+-#             = icon('fas', 'image', class: 'icon')
+-#             = f.file_field :image, class: 'hidden'
+-#         = f.submit 'Send', class: 'form__submit'
+
+ 

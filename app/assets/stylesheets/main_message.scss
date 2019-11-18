@@ -1,26 +1,33 @@
-      .message-header{
-        height: calc(100vh - 282px);
-        padding: 46px 40px;
-        background-color:#fafafa;
-        overflow: scroll; 
-        .message-data__name{
-          display: flex;
-          margin: 0 auto;
-          &__d{
-            font-size: 16px;
-            color:#434A54;
-            font-size: bold;
-            margin-right: 10px;
-          }
-          &__message{
-              font-size: 12px;
-              color:#999999;
-              display: flex;
-          } 
-        }  
-        .message__text{
-          font-size: 15px;
-          color:#434A54;
-        }
+* {
+  box-sizing: border-box;
+}
+.message{
+  height: calc(100vh - 190px);
+  padding: 46px 40px;
+  background-color:#fff;
+  overflow: scroll; 
+  .message-header{
+    padding-bottom: 40px;
+    }
+    &-data__name{
+    display: flex;
+    margin-bottom: 10px;
+    &__d{
+      font-size: 16px;
+      color:#434A54;
+      font-size: bold;
+      margin-right: 10px;
+    }
+    &__message{
+      color: #999999;
+      font-size: 12px;
+      margin-left: 10px;
+    } 
+    }  
+      .message__text{
+        color: red;
+        font-size: 14px;
+        margin-bottom: 10px;
       }
-
+      
+}
