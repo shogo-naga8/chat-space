@@ -14,11 +14,6 @@
 
   .message
     = render @messages
-    .message-header
-      .message-data__name
-        %p.message-data__name__d
-        %p.message-data__name__message
-      .message__text
 
   .form
     = form_for [@group, @message] do |f|
