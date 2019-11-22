@@ -20,7 +20,7 @@ $(function() {
                 </p>
               </div>
             </div>
-            ${img}
+            ${image}
           </div>`
     return html; 
   }
@@ -41,7 +41,7 @@ $(function() {
 	  	$('.message').append(html);
 	  	$('#new_message')[0].reset('');
       $(".form__submit").prop('disabled', false);
-      $('.message').animate({ scrollTop: $('.message')[0].scrollHeight});
+      $('.message').animate({scrollTop: $('.message')[0].scrollHeight});
 	  })
 	  .fail(function(){
       alert('メッセージ送信に失敗しました');
@@ -62,7 +62,7 @@ $(function() {
         insertHTML = buildHTML(message);
         $('.message').append(insertHTML); 
       })
-      $('.message').animate({ scrollTop: $('.message')[0].scrollHeight});
+      $('.message').animate({scrollTop: $('.message')[0].scrollHeight});
         })
       .fail(function() {
         alert('更新に失敗しました');
