@@ -1,5 +1,4 @@
 $(function() {
-  
   function buildHTML(message){
     var content = message.content ? `${ message.content }` : "";
     var img = message.image ? `<img src= ${ message.image }>` : "";
@@ -13,15 +12,15 @@ $(function() {
                 <p class="message-data__name__message">
                   ${message.time}
                 </p>
-            </div>
-              <div class="message__text">
-                <p class="message__text__content">
-                  ${content}
-                </p>
+                </div>
+                <div class="message__text">
+                  <p class="message__text__content">
+                    ${message.content}
+                  </p>
+                </div>
               </div>
-            </div>
-            ${image}
-          </div>`
+              ${img}
+            </div>`     
     return html; 
   }
   $('#new_message').on('submit',function(e) {
@@ -71,5 +70,3 @@ $(function() {
   }
     setInterval(reloadMessages, 7000); 
 });
-
-

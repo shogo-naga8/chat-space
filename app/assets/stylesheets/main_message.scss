@@ -1,8 +1,10 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 .message{
-  height: calc(100vh - 210px);
+  height: calc(100vh - 190px);
   padding: 46px 40px;
   background-color:#fff;
   overflow: scroll; 
@@ -16,6 +18,7 @@
       color:#434A54;
       font-size: bold;
       margin-right: 10px;
+      margin-bottom: 10px;
     }
     &__message{
       color: #999999;
