@@ -1,6 +1,5 @@
 $(function() {
   function buildHTML(message){
-    var content = message.content ? `${ message.content }` : "";
     var img = message.image ? `<img src= ${ message.image }>` : "";
   	  var html =
   	    `<div class="messages" data-message-id= "${message.id}">
@@ -44,10 +43,11 @@ $(function() {
 	  })
 	  .fail(function(){
       alert('メッセージ送信に失敗しました');
+      $(".form__submit").prop('disabled', false);
 	  })
   })
   var reloadMessages = function() {
-    if (window.location.href.match(/\/groups\/\d+\/messages/)){
+    if (window.location.href.match(/\/group\/\d+\/message/)){
       var last_message_id = $('.messages:last').data("message-id");
       $.ajax({
         url: "api/messages",
@@ -62,7 +62,7 @@ $(function() {
         $('.message').append(insertHTML); 
       })
       $('.message').animate({scrollTop: $('.message')[0].scrollHeight});
-        })
+      })
       .fail(function() {
         alert('更新に失敗しました');
       });
