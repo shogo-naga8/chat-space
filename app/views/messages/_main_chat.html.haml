@@ -10,7 +10,7 @@
             = user.name
     .main-header__right__box
       %p.main-header__right__box__edit-btn
-        = link_to "Edit",edit_group_path(current_user),class:"dddd-btn"
+        = link_to "Edit",edit_group_path(params[:group_id]),class:"dddd-btn"
 
   .message
     = render @messages
