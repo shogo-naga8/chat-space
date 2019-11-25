@@ -60,8 +60,8 @@ $(function() {
         messages.forEach(function (message) {
         insertHTML = buildHTML(message);
         $('.message').append(insertHTML); 
+        $('.message').animate({scrollTop: $('.message')[0].scrollHeight});
       })
-      $('.message').animate({scrollTop: $('.message')[0].scrollHeight});
       })
       .fail(function() {
         alert('更新に失敗しました');
